@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mario Kart 8 Deluxe – Téléchargement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/udvygiv463rwfdjcf9q9m/apphub.png?dl=1">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #122033, #0b1520);
+    color: white;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    background: #0e1a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    color: #ff3d00;
+}
+
+header button {
+    background: #ff3d00;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    width: 260px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 25px rgba(255,61,0,0.6));
+}
+
+/* TEXTE */
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* BOUTON */
+.download-btn {
+    background: linear-gradient(45deg, #ff3d00, #ff9100);
+    border: none;
+    padding: 18px 45px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 0 30px rgba(255,61,0,0.5);
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255,61,0,0.8);
+}
+
+/* YOUTUBE */
+.youtube-section {
+    margin-top: 60px;
+}
+
+.youtube-section h3 {
+    margin-bottom: 20px;
+    color: #ff9100;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255,145,0,0.4);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    .download-btn {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>AppHub</h1>
+    <button onclick="window.history.back()">Retour</button>
+</header>
+
+<div class="container">
+
+    <img class="logo"
+         src="https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000000126/SQ_NSwitch_MarioKart8Deluxe"
+         alt="Mario Kart 8 Deluxe">
+
+    <h2>Mario Kart 8 Deluxe – v3.0.5</h2>
+    <p>Jeu Nintendo Switch – compatible émulateur / console (backup personnel).</p>
+
+    <button class="download-btn"
+        onclick="window.open('https://app.drime.cloud/drive/s/IA5e7ja2WdRy4qLZFpdz039744cQuX')">
+        Télécharger (3.0.5)
+    </button>
+
+    <div class="youtube-section">
+        <h3>Gameplay / Tutoriel</h3>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/tKlRN2YpxRE"
+                title="Mario Kart 8 Deluxe"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
