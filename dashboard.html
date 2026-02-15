@@ -147,7 +147,7 @@ async function loadApps() {
 
         // Générer automatiquement le lien vers /apps/<nom>.html
         const pageName = data.name.toLowerCase().replace(/\s+/g, '') + ".html";
-        card.onclick = () => window.location.href = `/apps/${pageName}`;
+        card.onclick = () => window.location.href = `/apphub/apps/${pageName}`;
 
         container.appendChild(card);
     });
@@ -158,3 +158,4 @@ loadApps();
 
 </body>
 </html>
+
