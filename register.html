@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>AppHub – Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/udvygiv463rwfdjcf9q9m/apphub.png?rlkey=tzfqv7nur15y3fjezvap2x07h&st=wkkmu99f&dl=1">
+    <link rel="stylesheet" href="style.css"> <!-- si tu as un CSS global -->
+</head>
+<body>
+
+<div class="login-container">
+    <div class="logo">
+        <div class="logo-icon">A</div>
+    </div>
+
+    <h1>AppHub</h1>
+    <p class="subtitle">Create your account</p>
+
+    <form>
+        <div class="form-group">
+            <input id="email" type="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+            <input id="password" type="password" placeholder="Password (min 6 chars)" required>
+        </div>
+
+        <button class="login-btn" type="submit">
+            Create account
+        </button>
+    </form>
+
+    <div class="footer-link">
+        <a href="index.html">Already have an account?</a>
+    </div>
+</div>
+
+<!-- 🔥 Firebase Register -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword 
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDSekwBtU3u3DquxJIm9N7urL1_8zdrm34",
+  authDomain: "apphub-94be4.firebaseapp.com",
+  projectId: "apphub-94be4",
+  storageBucket: "apphub-94be4.firebasestorage.app",
+  messagingSenderId: "86249833874",
+  appId: "1:86249833874:web:d83466be51eaf27a4a2d4b",
+  measurementId: "G-B16MB4RCTQ"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            alert("Compte créé avec succès ✔");
+            window.location.href = "dashboard.html";
+        })
+        .catch(err => {
+            alert(err.message);
+        });
+});
+</script>
+
+</body>
+</html>
